@@ -1,6 +1,9 @@
 from ..interfaces.manager import Manager
+from ...infra.marvel.repo import Repository
 
 class Services(Manager):
+    
     def loadAll(self):
-        pass
+        data = Repository().findAll()
+        return data
     
